@@ -7,9 +7,11 @@
 body {
     font-family: 'Barlow', sans-serif;
     color: #fff;
-    background-image: url("/assets/home/background-home-desktop.jpg");
+    background-image: url("../assets/home/background-home-desktop.jpg");
     height: 900px;
     width: 1440px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -109,6 +111,21 @@ body {
     font-size: 18px;
     line-height: 32px;
     color: #D0D6F9;
+}
+
+.explore-icon {
+    position: absolute;
+    width: 274px;
+    height: 250px;
+    left: 800px;
+    top: 300px;
+    background: #FFF;
+    color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 65%;
 }
 
 
