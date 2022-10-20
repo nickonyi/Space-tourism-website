@@ -6,15 +6,83 @@
 
 body {
     background-image: url("../assets/destination/background-destination-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1440px;
+    height: 900px;
 }
 
 .header-text {
     position: absolute;
     left: 166.5px;
     top: 212px;
+    display: flex;
+    gap: 40px;
+    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
 }
 
-.move-bwana {
+.header-text-1 {
+    color: rgb(255, 255, 255, 0.3);
+}
+
+.header-text-2 {
+    text-transform: uppercase;
+}
+
+.main-content {
     position: absolute;
-    top: 600px;
+    top: 400px;
+    left: 300px;
+    border: 1px solid;
+    display: flex;
+    width: 1050px;
+    height: 500px;
+    gap: 150px;
+}
+
+.main-content-text-header {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.main-content-text-header li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.main-content-text-header li a {
+    text-decoration: none;
+    color: #f0f8ff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Barlow Condensed';
+    letter-spacing: 2.7px;
+}
+
+.main-content-text-header>li:hover {
+    cursor: pointer;
+    border-bottom: 3px solid;
+}
+
+.moon-text {
+    font-family: 'Bellefair';
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.main-content-text-content {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+    margin-top: 30px;
+    border-bottom: 1px solid;
+    padding-bottom: 80px;
 }
