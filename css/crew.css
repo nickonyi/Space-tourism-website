@@ -79,3 +79,26 @@ body {
     line-height: 32px;
     color: #D0D6F9;
 }
+
+.main-footer {
+    display: flex;
+    position: absolute;
+    gap: 50px;
+    left: 167px;
+    top: 829px;
+}
+
+.footer-links {
+    height: 15px;
+    width: 15px;
+    background: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.footer-links>a {
+    opacity: 0;
+}
