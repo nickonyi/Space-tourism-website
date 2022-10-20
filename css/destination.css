@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+}
+
+.header-text {
+    position: absolute;
+    left: 166.5px;
+    top: 212px;
+}
+
+.move-bwana {
+    position: absolute;
+    top: 600px;
+}
