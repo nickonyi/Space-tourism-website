@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 1440px;
-    height: 900px;
+    height: 990px;
 }
 
 .header-text {
@@ -35,7 +35,6 @@ body {
     position: absolute;
     top: 400px;
     left: 300px;
-    border: 1px solid;
     display: flex;
     width: 1050px;
     height: 500px;
@@ -85,4 +84,31 @@ body {
     margin-top: 30px;
     border-bottom: 1px solid;
     padding-bottom: 80px;
+}
+
+.main-content-text-footer {
+    display: flex;
+    gap: 100px;
+    margin-top: 10px;
+}
+
+.footer-1-content-1,
+.footer-2-content-1 {
+    padding-bottom: 10px;
+    letter-spacing: 2.3625px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Barlow Condensed';
+}
+
+.footer-1-content-2,
+.footer-2-content-2 {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
