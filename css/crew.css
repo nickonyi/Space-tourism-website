@@ -7,7 +7,8 @@
 body {
     background-image: url("../assets/crew/background-crew-desktop.jpg");
     width: 1440px;
-    height: 900px
+    height: 922px;
+    background-size: cover;
 }
 
 .header-text {
@@ -40,22 +41,22 @@ body {
 
 .main-content-img {
     position: relative;
-    top: -67px;
+    top: -82px;
 }
 
 .img-engineer {
     position: relative;
-    top: 32px;
+    top: 17px;
 }
 
 .img-spec {
     position: relative;
-    top: -5.5px;
+    top: -23px;
 }
 
 .img-pilot {
     position: relative;
-    top: -15px;
+    top: -27px;
 }
 
 .main-content-text {
@@ -117,12 +118,17 @@ body {
 .footer-links {
     height: 15px;
     width: 15px;
-    background: white;
+    background: rgb(168, 164, 164);
     margin-bottom: 20px;
     cursor: pointer;
     list-style: none;
     border-radius: 50%;
     text-align: center;
+}
+
+.footer-links:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
 }
 
 .footer-links>a {
