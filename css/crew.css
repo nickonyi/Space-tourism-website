@@ -40,7 +40,22 @@ body {
 
 .main-content-img {
     position: relative;
-    top: -110px;
+    top: -67px;
+}
+
+.img-engineer {
+    position: relative;
+    top: 32px;
+}
+
+.img-spec {
+    position: relative;
+    top: -5.5px;
+}
+
+.img-pilot {
+    position: relative;
+    top: -15px;
 }
 
 .main-content-text {
