@@ -86,6 +86,17 @@ body {
     margin: 30px 0 30px 0;
 }
 
+.engineer-name {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 64px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 30px 0 30px 0;
+}
+
 .main-content-main-text {
     font-family: 'Barlow';
     font-style: normal;
