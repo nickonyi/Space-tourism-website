@@ -34,7 +34,7 @@ body {
     position: absolute;
     top: 400px;
     left: 100px;
-    width: 1100px;
+    width: 1250px;
     height: 800px;
     display: flex;
     justify-content: space-between;
@@ -42,9 +42,7 @@ body {
 }
 
 .main-content-text {
-    width: 1500px;
-    height: 271px;
-    border: 1px solid;
+    height: 400px;
     padding: 20px;
 }
 
@@ -102,12 +100,22 @@ body {
     font-family: 'Bellefair';
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 40px;
     color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 20px 0 20px 0;
+}
+
+.main-content-main-text {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
 }
 
 .main-content-img {
     position: relative;
-    left: 100px;
+    top: -100px;
 }
