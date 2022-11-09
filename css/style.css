@@ -150,9 +150,19 @@ html.is-leaving .transition-fade {
 
 /*---------------------------End of main content styling--------------------------------------*/
 
-@media (max-width:600px) {
+
+/*-----------------Media queries----------------------------*/
+
+@media (max-width:500px) {
     body {
-        height: 900px;
-        width: 600px;
+        background-image: url("/assets/home/background-home-mobile.jpg");
+        width: 500px;
+    }
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-line {
+        display: none;
     }
 }
