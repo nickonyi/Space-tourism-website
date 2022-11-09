@@ -153,16 +153,30 @@ html.is-leaving .transition-fade {
 
 /*-----------------Media queries----------------------------*/
 
-@media (max-width:500px) {
+@media (max-width:767px) {
     body {
         background-image: url("/assets/home/background-home-mobile.jpg");
-        width: 500px;
+        width: 100vw;
     }
     .main-header {
         display: flex;
         justify-content: space-between;
     }
     .header-line {
+        display: none;
+    }
+    .header-contents {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border: 20px solid yellow;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:767px) {
+    .header-toggle {
         display: none;
     }
 }
