@@ -9,7 +9,6 @@ body {
     color: #fff;
     background-image: url("../assets/home/background-home-desktop.jpg");
     height: 900px;
-    width: 1440px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -155,8 +154,12 @@ html.is-leaving .transition-fade {
 
 @media (max-width:767px) {
     body {
-        background-image: url("/assets/home/background-home-mobile.jpg");
-        width: 100vw;
+        background-image: url("/assets/home/background-home-mobile.jpg") no-repeat bottom center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        height: 800px;
     }
     .main-header {
         display: flex;
@@ -168,10 +171,30 @@ html.is-leaving .transition-fade {
     .header-contents {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         border: 20px solid yellow;
         display: flex;
         flex-direction: column;
+        height: 100px;
+        z-index: 1;
+        background-color: rgb(48, 46, 184);
+        color: red;
+    }
+    .explore-icon {
+        position: absolute;
+        width: 274px;
+        height: 270px;
+        left: 100px;
+        top: 80px;
+        background: #FFF;
+        color: rgb(10, 10, 10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 33px;
+        border-radius: 65%;
+        text-transform: uppercase;
+        font-family: 'Bellefair', serif;
     }
 }
 
