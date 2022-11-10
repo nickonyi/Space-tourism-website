@@ -6,8 +6,11 @@
 
 body {
     font-family: 'Barlow', sans-serif;
-    color: rgb(219, 83, 83);
-    background-color: aquamarine;
+    color: rgb(253, 244, 244);
+    background-color: rgb(19, 15, 29);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content, 1fr;
 }
 
 .transition-fade {
@@ -35,6 +38,20 @@ html.is-leaving .transition-fade {
 
 
 /*--------------------------start of main content styling--------------------------------------*/
+
+.main-container {
+    display: grid;
+    border: 1px solid;
+}
+
+@media(min-width:720px) {
+    .main-container {
+        margin: 6rem;
+        width: 80%;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        gap: 150px;
+    }
+}
 
 
 /*---------------------------End of main content styling--------------------------------------*/
