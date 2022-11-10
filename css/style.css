@@ -56,6 +56,15 @@ html.is-leaving .transition-fade {
     z-index: 1;
 }
 
+.primary-navigation {
+    position: fixed;
+    top: 1000px;
+    left: 0;
+    flex-direction: column;
+    background-color: greenyellow;
+    border: 4px solid greenyellow;
+}
+
 .header-contents {
     position: absolute;
     width: 700px;
@@ -151,55 +160,3 @@ html.is-leaving .transition-fade {
 
 
 /*-----------------Media queries----------------------------*/
-
-@media (max-width:767px) {
-    body {
-        background-image: url("/assets/home/background-home-mobile.jpg") no-repeat bottom center scroll;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-        height: 800px;
-    }
-    .main-header {
-        display: flex;
-        justify-content: space-between;
-    }
-    .header-line {
-        display: none;
-    }
-    .header-contents {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        border: 20px solid yellow;
-        display: flex;
-        flex-direction: column;
-        height: 100px;
-        z-index: 1;
-        background-color: rgb(48, 46, 184);
-        color: red;
-    }
-    .explore-icon {
-        position: absolute;
-        width: 274px;
-        height: 270px;
-        left: 100px;
-        top: 80px;
-        background: #FFF;
-        color: rgb(10, 10, 10);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 33px;
-        border-radius: 65%;
-        text-transform: uppercase;
-        font-family: 'Bellefair', serif;
-    }
-}
-
-@media screen and (min-width:767px) {
-    .header-toggle {
-        display: none;
-    }
-}
