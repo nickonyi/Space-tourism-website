@@ -113,18 +113,22 @@ html.is-leaving .transition-fade {
 
 .grid-container {
     display: grid;
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 60rem)) minmax(2rem, 1fr);
-    column-gap: 4rem;
-    place-items: center;
+    border: 5px solid limegreen;
 }
 
-.grid-container>*:first-child {
-    grid-column: 2;
-    outline: 2px sol;
-}
-
-.grid-container>*:last-child {
-    grid-column: 3;
+@media(min-width:45rem) {
+    .grid-container {
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+        column-gap: 2rem;
+    }
+    .grid-container>*:first-child {
+        grid-column: 2;
+        outline: 2px solid red;
+    }
+    .grid-container>*:last-child {
+        grid-column: 3;
+        outline: 2px solid yellow;
+    }
 }
 
 @media(min-width:767px) {
@@ -140,22 +144,55 @@ html.is-leaving .transition-fade {
 
 .starting-text {
     font-weight: 400;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     font-family: 'Barlow Condensed';
 }
 
 .space-text {
-    font-size: 9.375rem;
+    font-size: 5.375rem;
     text-transform: uppercase;
     font-family: 'Bellefair';
 }
 
-.content-text {
-    font-size: 1.125rem;
-    color: #D0D6F9;
-    font-family: 'Barlow';
-    font-weight: 400;
+@media(min-width: 35em) {
+    .starting-text {
+        font-weight: 400;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed';
+    }
+    .space-text {
+        font-size: 7.375rem;
+        text-transform: uppercase;
+        font-family: 'Bellefair';
+    }
+    .content-text {
+        font-size: .825rem;
+        color: #D0D6F9;
+        font-family: 'Barlow';
+        font-weight: 400;
+    }
+}
+
+@media(min-width: 45em) {
+    .starting-text {
+        font-weight: 400;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed';
+    }
+    .space-text {
+        font-size: 9.375rem;
+        text-transform: uppercase;
+        font-family: 'Bellefair';
+    }
+    .content-text {
+        font-size: .825rem;
+        color: #D0D6F9;
+        font-family: 'Barlow';
+        font-weight: 400;
+    }
 }
 
 .explore-icon-tag {
