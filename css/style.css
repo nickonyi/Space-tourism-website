@@ -82,10 +82,8 @@ html.is-leaving .transition-fade {
 
 .main-container {
     display: grid;
-    border: 1px solid;
     text-align: center;
     place-items: center;
-    padding-inline: 2rem;
 }
 
 @media(min-width:767px) {
@@ -94,13 +92,9 @@ html.is-leaving .transition-fade {
         text-align: left;
         padding: 0 2.5rem 0 2.5rem;
     }
-    .main-container> :first-child {
-        border: 4px solid brown;
-    }
-    .main-container>:last-child {
-        border: 4px solid blue;
-        display: flex;
-        justify-content: center;
+    .grid-home {
+        padding-bottom: 6rem;
+        align-items: end;
     }
 }
 
@@ -155,4 +149,36 @@ html.is-leaving .transition-fade {
 /*---------------------------End of main content styling--------------------------------------*/
 
 
-/*-----------------Media queries----------------------------*/
+/*---------------------*/
+
+
+/* Page specific */
+
+
+/*---------------------*/
+
+
+/*home*/
+
+.home {
+    background: url('/assets/home/background-home-mobile.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+@media(min-width:35rem) {
+    .home {
+        background: url('/assets/home/background-home-tablet.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media(min-width:45rem) {
+    .home {
+        background: url('/assets/home/background-home-desktop.jpg');
+        background-size: cover;
+        background-position: bottom center;
+    }
+}
