@@ -43,6 +43,31 @@
     }
 }
 
+
+/* Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
 body {
     font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
@@ -80,15 +105,30 @@ html.is-leaving .transition-fade {
 
 /*--------------------------start of main content styling--------------------------------------*/
 
-.main-container {
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.grid-container {
     display: grid;
-    text-align: center;
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 60rem)) minmax(2rem, 1fr);
+    column-gap: 4rem;
     place-items: center;
 }
 
+.grid-container>*:first-child {
+    grid-column: 2;
+    outline: 2px sol;
+}
+
+.grid-container>*:last-child {
+    grid-column: 3;
+}
+
 @media(min-width:767px) {
-    .main-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .grid-container {
         text-align: left;
         padding: 0 2.5rem 0 2.5rem;
     }
@@ -118,7 +158,7 @@ html.is-leaving .transition-fade {
     font-weight: 400;
 }
 
-.explore-icon {
+.explore-icon-tag {
     height: 280px;
     width: 280px;
     background-color: #fff;
@@ -134,7 +174,7 @@ html.is-leaving .transition-fade {
     cursor: pointer;
 }
 
-.explore-icon>a {
+.explore-icon {
     text-decoration: none;
     font-size: 2rem;
     font-family: 'Bellefair';
@@ -160,6 +200,8 @@ html.is-leaving .transition-fade {
 
 /*home*/
 
+
+/*
 .home {
     background: url('/assets/home/background-home-mobile.jpg');
     background-size: cover;
