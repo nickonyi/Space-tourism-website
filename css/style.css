@@ -79,6 +79,10 @@ body {
     grid-template-rows: min-content 1fr;
 }
 
+.d-block {
+    display: block;
+}
+
 .transition-fade {
     opacity: 1;
     transition: 500ms;
@@ -128,17 +132,6 @@ html.is-leaving .transition-fade {
     .grid-container>*:last-child {
         grid-column: 3;
         outline: 2px solid yellow;
-    }
-}
-
-@media(min-width:767px) {
-    .grid-container {
-        text-align: left;
-        padding: 0 2.5rem 0 2.5rem;
-    }
-    .grid-home {
-        padding-bottom: 6rem;
-        align-items: end;
     }
 }
 
