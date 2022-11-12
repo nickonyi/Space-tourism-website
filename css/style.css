@@ -106,17 +106,21 @@ body {
 .header-contents {
     display: flex;
     --underline-gap: 2rem;
-    border: 1px solid blue;
-    background-color: rgb(25, 155, 79);
+    background-color: rgb(255, 255, 255, .05);
+    backdrop-filter: blur(2rem);
 }
 
 .primary-navigation {
     position: fixed;
     margin: 0;
-    padding: 4rem 2rem;
-    z-index: 1;
+    padding: 2rem 2rem;
+    z-index: 1000;
     gap: 6rem;
     --underline-gap: 2rem;
+}
+
+.mobile-nav-toggle {
+    display: none;
 }
 
 @media(max-width:35em) {
@@ -127,7 +131,7 @@ body {
         padding: min(6rem, 15vh) 2rem;
         z-index: 1;
         flex-direction: column;
-        --underline-gap: 2rem;
+        --underline-gap: .1rem;
     }
 }
 
