@@ -83,8 +83,58 @@ body {
     display: block;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
+}
+
 
 /*---------------------------Start of Header styling--------------------------------------*/
+
+.main-header {
+    display: flex;
+}
+
+.header-contents {
+    display: flex;
+    --underline-gap: 2rem;
+    border: 1px solid blue;
+    flex-direction: column;
+    background-color: rgb(25, 155, 79);
+}
+
+.primary-navigation {
+    position: fixed;
+    inset: 0 0 0 50%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.header-contents>li {
+    list-style: none;
+}
+
+.header-contents li a {
+    text-decoration: none;
+    font-family: 'Barlow Condensed';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.header-contents li span {
+    margin-right: .5rem;
+}
 
 
 /*---------------------------End of Header styling--------------------------------------*/
@@ -101,7 +151,6 @@ body {
 .grid-container {
     text-align: center;
     display: grid;
-    border: 5px solid limegreen;
     place-items: center;
     padding-inline: 1rem;
 }
@@ -118,24 +167,14 @@ body {
     }
     .grid-container>*:first-child {
         grid-column: 2;
-        outline: 2px solid red;
     }
     .grid-container>*:last-child {
         grid-column: 3;
-        outline: 2px solid yellow;
     }
     .grid-container--home {
-        padding-bottom: 6rem;
+        padding-bottom: max(6rem, 20vh);
         align-items: flex-end;
     }
-}
-
-.grid-container>*:first-child {
-    outline: 2px solid red;
-}
-
-.grid-container>*:last-child {
-    outline: 2px solid yellow;
 }
 
 .starting-text {
@@ -200,6 +239,7 @@ body {
     aspect-ratio: 1;
     text-decoration: none;
     background: #fff;
+    transition: all 1s;
 }
 
 .explore-icon:hover {
@@ -233,18 +273,15 @@ body {
 
 /*home*/
 
-
-/*
 .home {
-    background: url('/assets/home/background-home-mobile.jpg');
+    background: url('../assets/home/background-home-mobile.jpg');
     background-size: cover;
     background-position: bottom center;
-    background-repeat: no-repeat;
 }
 
 @media(min-width:35rem) {
     .home {
-        background: url('/assets/home/background-home-tablet.jpg');
+        background: url('../assets/home/background-home-tablet.jpg');
         background-size: cover;
         background-position: center center;
     }
@@ -252,7 +289,7 @@ body {
 
 @media(min-width:45rem) {
     .home {
-        background: url('/assets/home/background-home-desktop.jpg');
+        background: url('../assets/home/background-home-desktop.jpg');
         background-size: cover;
         background-position: bottom center;
     }
