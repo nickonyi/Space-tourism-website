@@ -102,6 +102,12 @@ body {
     text-align: center;
     display: grid;
     border: 5px solid limegreen;
+    place-items: center;
+    padding-inline: 1rem;
+}
+
+.grid-container>* {
+    max-width: 50ch;
 }
 
 @media(min-width:45rem) {
@@ -118,6 +124,18 @@ body {
         grid-column: 3;
         outline: 2px solid yellow;
     }
+    .grid-container--home {
+        padding-bottom: 6rem;
+        align-items: flex-end;
+    }
+}
+
+.grid-container>*:first-child {
+    outline: 2px solid red;
+}
+
+.grid-container>*:last-child {
+    outline: 2px solid yellow;
 }
 
 .starting-text {
