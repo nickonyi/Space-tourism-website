@@ -107,16 +107,28 @@ body {
     display: flex;
     --underline-gap: 2rem;
     border: 1px solid blue;
-    flex-direction: column;
     background-color: rgb(25, 155, 79);
 }
 
 .primary-navigation {
     position: fixed;
-    inset: 0 0 0 50%;
     margin: 0;
-    padding: 0;
+    padding: 4rem 2rem;
     z-index: 1;
+    gap: 6rem;
+    --underline-gap: 2rem;
+}
+
+@media(max-width:35em) {
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 30%;
+        margin: 0;
+        padding: min(6rem, 15vh) 2rem;
+        z-index: 1;
+        flex-direction: column;
+        --underline-gap: 2rem;
+    }
 }
 
 .header-contents>li {
