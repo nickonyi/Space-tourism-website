@@ -142,13 +142,18 @@ body {
         display: block;
         position: absolute;
         z-index: 2000;
-        top: 2rem;
         right: 1rem;
-        background-image: url('../assets/shared/icon-hamburger.svg');
+        top: 2rem;
+        background-image: url('../assets/shared/icons8-menu.svg');
         background-repeat: no-repeat;
-        border: 0;
-        width: 1rem;
+        background-size: cover;
+        width: 1.5rem;
         aspect-ratio: 1;
+        border: 0;
+    }
+    .mobile-nav-toggle[aria-expanded='true'] {
+        background: url('../assets/shared/icon-close.svg');
+        background-size: cover;
     }
 }
 
