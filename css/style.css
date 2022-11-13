@@ -132,6 +132,19 @@ body {
         z-index: 1;
         flex-direction: column;
         --underline-gap: .1rem;
+        transform: translateX(100%);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        top: 2rem;
+        right: 1rem;
+        background-image: url('../assets/shared/icon-hamburger.svg');
+        background-repeat: no-repeat;
+        border: 0;
+        width: 1rem;
+        aspect-ratio: 1;
     }
 }
 
