@@ -104,8 +104,7 @@ body {
 }
 
 .header-contents {
-    display: flex;
-    --underline-gap: 2rem;
+    gap: 10rem;
     background-color: rgb(255, 255, 255, .05);
     backdrop-filter: blur(2rem);
 }
@@ -115,6 +114,7 @@ body {
     margin: 0;
     padding: 2rem 2rem;
     z-index: 1000;
+    display: flex;
     gap: 6rem;
     --underline-gap: 2rem;
 }
@@ -131,8 +131,11 @@ body {
         padding: min(6rem, 15vh) 2rem;
         z-index: 1;
         flex-direction: column;
-        --underline-gap: .1rem;
+        gap: 2rem;
         transform: translateX(100%);
+    }
+    .primary-navigation[data-visible='true'] {
+        transform: translateX(0);
     }
     .mobile-nav-toggle {
         display: block;
@@ -154,7 +157,7 @@ body {
 
 .header-contents li a {
     text-decoration: none;
-    font-family: 'Barlow Condensed';
+    font-family: "Barlow Condensed", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
