@@ -99,8 +99,11 @@ body {
 
 /*---------------------------Start of Header styling--------------------------------------*/
 
-.main-header {
+.primary-header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem 15rem 1rem;
 }
 
 .header-contents {
@@ -109,8 +112,11 @@ body {
     backdrop-filter: blur(2rem);
 }
 
+.logo {
+    margin: 1.5rem clamp(1.2rem, 5vw, 3.5rem);
+}
+
 .primary-navigation {
-    position: fixed;
     margin: 0;
     padding: 2rem 2rem;
     z-index: 1000;
@@ -159,6 +165,13 @@ body {
 
 .header-contents>li {
     list-style: none;
+    padding-bottom: 1.2rem;
+}
+
+.header-contents>li:hover {
+    color: aquamarine;
+    border-bottom: 4px solid #ffffff;
+    cursor: pointer;
 }
 
 .header-contents li a {
