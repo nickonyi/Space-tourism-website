@@ -204,6 +204,14 @@ body {
 }
 
 @media(min-width:64rem) {
+    .primary-header::before {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        background: blue;
+        width: 30%;
+    }
     .primary-navigation {
         margin-block: 2rem;
     }
