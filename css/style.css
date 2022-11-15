@@ -103,11 +103,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 1rem 15rem 1rem;
 }
 
 .header-contents {
-    gap: 10rem;
     background-color: rgb(255, 255, 255, .05);
     backdrop-filter: blur(2rem);
 }
@@ -117,11 +115,11 @@ body {
 }
 
 .primary-navigation {
+    gap: 6rem;
     margin: 0;
     padding: 2rem 2rem;
     z-index: 1000;
     display: flex;
-    gap: 6rem;
     --underline-gap: 2rem;
 }
 
@@ -129,7 +127,7 @@ body {
     display: none;
 }
 
-@media(max-width:35em) {
+@media(max-width:35rem) {
     .primary-navigation {
         position: fixed;
         inset: 0 0 0 30%;
@@ -187,6 +185,16 @@ body {
     margin-right: .5rem;
 }
 
+@media(min-width:45rem) and (max-width:64rem) {
+    .primary-navigation {
+        padding-inline: 2rem;
+        gap: 3.5rem;
+    }
+    .primary-navigation li span {
+        display: none;
+    }
+}
+
 
 /*---------------------------End of Header styling--------------------------------------*/
 
@@ -210,7 +218,7 @@ body {
     max-width: 50ch;
 }
 
-@media(min-width:45rem) {
+@media(min-width:62rem) {
     .grid-container {
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
         column-gap: 2rem;
@@ -328,6 +336,7 @@ body {
     background: url('../assets/home/background-home-mobile.jpg');
     background-size: cover;
     background-position: bottom center;
+    background-repeat: no-repeat;
 }
 
 @media(min-width:35rem) {
@@ -335,13 +344,16 @@ body {
         background: url('../assets/home/background-home-tablet.jpg');
         background-size: cover;
         background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 }
 
-@media(min-width:45rem) {
+@media(min-width:64rem) {
     .home {
         background: url('../assets/home/background-home-desktop.jpg');
         background-size: cover;
         background-position: bottom center;
+        background-repeat: no-repeat;
     }
 }
