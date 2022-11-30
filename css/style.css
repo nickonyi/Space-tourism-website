@@ -204,6 +204,9 @@ body {
 }
 
 @media(min-width:64rem) {
+    .primary-header {
+        position: relative;
+    }
     .primary-header::before {
         content: '';
         display: block;
