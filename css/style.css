@@ -575,6 +575,17 @@
         margin-top: 2.5rem;
     }
     
+    @media(min-width:45rem) {
+        .numbered-title {
+            justify-self: start;
+            margin-top: -8rem;
+        }
+        .destination-meta {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+    
     @media(min-width:62rem) {
         .grid-container {
             grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
