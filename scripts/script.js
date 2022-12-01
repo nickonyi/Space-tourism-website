@@ -12,7 +12,7 @@ navToggle.addEventListener("click", () => {
     //if the nav is open close it
     else {
         nav.setAttribute("data-visible", false);
-        navToggle.setAttribute("aria-expanded", false)
+        navToggle.setAttribute("aria-expanded", false);
     }
 
 

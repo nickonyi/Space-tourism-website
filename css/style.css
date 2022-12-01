@@ -538,6 +538,7 @@
         display: grid;
         place-items: center;
         padding-inline: 1rem;
+        padding-bottom: 4rem;
     }
     
     .grid-container>* {
@@ -550,12 +551,28 @@
     /*  Destination layout*/
     
     .grid-container--destination {
+        --flow-space: 2rem;
         grid-template-areas: 'title' 'image' 'tabs' 'contents';
     }
     
     .grid-container--destination>img {
         grid-area: image;
         max-width: 60%;
+    }
+    
+    .grid-container--destination>.tab-list {
+        grid-area: tabs;
+    }
+    
+    .grid-container--destination>.destination-info {
+        grid-area: contents;
+    }
+    
+    .destination-meta {
+        flex-direction: column;
+        border-top: 1px solid hsl( var(--clr-white) / .25);
+        padding-top: 2.5rem;
+        margin-top: 2.5rem;
     }
     
     @media(min-width:62rem) {
