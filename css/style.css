@@ -532,6 +532,60 @@
             background-repeat: no-repeat;
         }
     }
+    /*destination*/
+    
+    .destination {
+        background: url('../assets/destination/background-destination-mobile.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+    
+    @media(min-width:35rem) {
+        .destination {
+            background: url('../assets/destination/background-destination-tablet.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    }
+    
+    @media(min-width:64rem) {
+        .destination {
+            background: url('../assets/destination/background-destination-desktop.jpg');
+            background-size: cover;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+    }
+    /*crew*/
+    
+    .crew {
+        background: url('../assets/home/background-home-mobile.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+    
+    @media(min-width:35rem) {
+        .crew {
+            background: url('../assets/home/background-home-tablet.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    }
+    
+    @media(min-width:64rem) {
+        .crew {
+            background: url('../assets/home/background-home-desktop.jpg');
+            background-size: cover;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+    }
     /*---------------*/
     /*Destination styling*/
     /*------------------*/
@@ -640,6 +694,7 @@
         }
         .grid-container--crew {
             --flow-space: 2rem;
+            padding-bottom: 0;
             grid-template-areas: 'title' 'contents' 'tabs' 'image';
         }
         .grid-container--crew>img {
@@ -679,5 +734,11 @@
         }
         .grid-container--crew {
             grid-template-areas: '. title title .' '. contents image .''. tabs image .';
+        }
+        .grid-container--crew>.dot-indicators {
+            justify-self: start;
+        }
+        .grid-container--crew>img {
+            align-self: end;
         }
     }
