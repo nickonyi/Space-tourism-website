@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;1,400&family=Bai+Jamjuree:wght@200;300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,300&family=Ceviche+One&family=Concert+One&family=Cormorant+SC:wght@300;400;500;600;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Odibee+Sans&family=Open+Sans:wght@400;700&family=Oswald:wght@200;300;500&family=Outfit:wght@300;400;600&family=Poppins:wght@600&family=Red+Hat+Display:wght@500;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Rubik:wght@400;500;700&family=Zen+Antique+Soft&display=swap"
         rel="stylesheet">
     <script defer src="./scripts/script.js"></script>
+    <script defer src="./scripts/tab.js"></script>
 
     <title>Frontend Mentor | Space tourism website</title>
 </head>
@@ -33,7 +34,7 @@
                 <li class="active">
                     <a href="index.html"> <span>00 </span>Home</a>
                 </li>
-                <li><a href="destination-moon.html"><span>01</span> Destination</a></li>
+                <li><a href="destination.html"><span>01</span> Destination</a></li>
                 <li><a href="crew-commander.html"><span>02</span> Crew</a></li>
                 <li><a href="technology-vehicle.html"><span>03</span> Technology</a></li>
             </ul>
@@ -45,6 +46,18 @@
         <picture>
             <source srcset="./assets/destination/image-moon.webp" type="image/webp">
             <img src="./assets/destination/image-moon.png" alt="the moon">
+        </picture>
+        <picture hidden>
+            <source srcset="./assets/destination/image-mars.webp" type="image/webp">
+            <img src="./assets/destination/image-mars.png" alt="the planet mars">
+        </picture>
+        <picture hidden>
+            <source srcset="./assets/destination/image-europa.webp" type="image/webp">
+            <img src="./assets/destination/image-europa.png" alt="the planet europa">
+        </picture>
+        <picture hidden>
+            <source srcset="./assets/destination/image-titan.webp" type="image/webp">
+            <img src="./assets/destination/image-titan.png" alt="the moon titan">
         </picture>
         <div class="tab-list underline-indicators flex">
             <button aria-selected="true" class="uppercase ff-sans-cond text-accent  letter-spacing-2">Moon</button>
@@ -68,8 +81,57 @@
                     <p class="ff-serif uppercase"> 3 days</p>
                 </div>
             </div>
-
-
+        </article>
+        <!-- Mars content-->
+        <article hidden class="destination-info flow">
+            <h2 class="fs-800 uppercase ff-serif">Mars </h2>
+            <p>
+                Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
+            </p>
+            <div class="destination-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase"> Avg. distance</h3>
+                    <p class="ff-serif uppercase ">225 mil. km</p>
+                </div>
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+                    <p class="ff-serif uppercase">9 months</p>
+                </div>
+            </div>
+        </article>
+        <!-- The planet Europa  content-->
+        <article hidden class="destination-info flow">
+            <h2 class="fs-800 uppercase ff-serif">Europa </h2>
+            <p>
+                The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
+            </p>
+            <div class="destination-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase"> Avg. distance</h3>
+                    <p class="ff-serif uppercase "> 628 mil. km</p>
+                </div>
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+                    <p class="ff-serif uppercase"> 3 years</p>
+                </div>
+            </div>
+        </article>
+        <!-- The moon titan content-->
+        <article hidden class="destination-info flow">
+            <h2 class="fs-800 uppercase ff-serif">Titan</h2>
+            <p>
+                The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
+            </p>
+            <div class="destination-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase"> Avg. distance</h3>
+                    <p class="ff-serif uppercase ">1.6 bil. km</p>
+                </div>
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+                    <p class="ff-serif uppercase">7 years</p>
+                </div>
+            </div>
         </article>
     </main>
 </body>
