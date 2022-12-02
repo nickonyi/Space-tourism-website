@@ -541,7 +541,7 @@
         padding-bottom: 4rem;
     }
     
-    .grid-container>* {
+    .grid-container p:not([class]) {
         max-width: 50ch;
     }
     /*  Destination layout*/
@@ -575,6 +575,10 @@
         margin-top: 2.5rem;
     }
     
+    .destination-meta p {
+        font-size: 1.75rem;
+    }
+    
     @media(min-width:45rem) {
         .numbered-title {
             justify-self: start;
@@ -604,9 +608,14 @@
         }
         .grid-container--destination {
             justify-items: start;
+            align-content: start;
             grid-template-areas: '. title title .' '. image tabs .' '. image contents .';
         }
         .grid-container--destination>img {
             max-width: 90%;
+        }
+        .destination-meta {
+            justify-content: start;
+            --gap: 6rem;
         }
     }
