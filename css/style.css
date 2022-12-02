@@ -751,3 +751,7 @@
             align-self: end;
         }
     }
+    
+    [role="tab"]:focus {
+        color: yellow;
+    }
