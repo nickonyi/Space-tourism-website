@@ -152,6 +152,7 @@
         padding: var(--underline-gap, 1rem) 0;
         border: 0;
         border-bottom: .2rem solid hsl( var(--clr-white) / 0);
+        background-color: transparent;
     }
     
     .underline-indicators>*:hover,
@@ -562,7 +563,7 @@
     /*crew*/
     
     .crew {
-        background: url('../assets/home/background-home-mobile.jpg');
+        background: url('../assets/crew/background-crew-mobile.jpg');
         background-size: cover;
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -570,7 +571,7 @@
     
     @media(min-width:35rem) {
         .crew {
-            background: url('../assets/home/background-home-tablet.jpg');
+            background: url('../assets/crew/background-crew-tablet.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -580,7 +581,7 @@
     
     @media(min-width:64rem) {
         .crew {
-            background: url('../assets/home/background-home-desktop.jpg');
+            background: url('../assets/crew/background-crew-desktop.jpg');
             background-size: cover;
             background-position: bottom center;
             background-repeat: no-repeat;
