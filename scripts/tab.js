@@ -50,8 +50,9 @@ function changeTabPanel(e) {
     targetTab.setAttribute("aria-selected", true);
 
     hideContent(mainContainer, '[role="tabpanel"]');
-    hideContent(mainContainer, 'picture');
     showContent(mainContainer, [`#${targetPanel}`]);
+
+    hideContent(mainContainer, 'picture');
     showContent(mainContainer, [`#${targetImage}`]);
     // mainContainer
     //     .querySelectorAll('[role="tabpanel"]')
