@@ -46,23 +46,38 @@ function changeTabPanel(e) {
     const targetContainer = targetTab.parentNode;
     const mainContainer = targetContainer.parentNode;
 
-    targetContainer
-        .querySelector('[aria-selected="true"]')
-        .setAttribute("aria-selected", false);
+    targetContainer.querySelector('[aria-selected="true"]').setAttribute("aria-selected", true);
+    targetTab.setAttribute("aria-selected", true);
 
-    mainContainer.querySelectorAll('[role="tabpanel"]')
-        .forEach(tabpanel => tabpanel
+    hideContent(mainContainer, '[role="tabpanel"]');
+    hideContent(mainContainer, 'picture');
+    showContent(mainContainer, [`#${targetPanel}`]);
+    showContent(mainContainer, [`#${targetImage}`]);
+    // mainContainer
+    //     .querySelectorAll('[role="tabpanel"]')
+    //     .forEach((panel) => panel.setAttribute("hidden", true));
+    // mainContainer
+    //     .querySelector([`#${targetPanel}`])
+    //     .removeAttribute('hidden');
+
+    // mainContainer
+    //     .querySelectorAll('picture')
+    //     .forEach(pic => pic.setAttribute("hidden", true));
+    // mainContainer
+    //     .querySelector([`#${targetImage}`])
+    //     .removeAttribute('hidden');
+
+
+}
+
+function hideContent(parent, content) {
+    parent.querySelectorAll(content)
+        .forEach(item => item
             .setAttribute("hidden", true));
-    mainContainer
-        .querySelector([`#${targetPanel}`])
+}
+
+function showContent(parent, img) {
+    parent
+        .querySelector(img)
         .removeAttribute('hidden');
-
-    mainContainer
-        .querySelectorAll('picture')
-        .forEach(pic => pic.setAttribute("hidden", true));
-    mainContainer
-        .querySelector([`#${targetImage}`])
-        .removeAttribute('hidden');
-
-
 }
