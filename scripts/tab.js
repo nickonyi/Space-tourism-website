@@ -35,3 +35,14 @@ function changeTabFocus(e) {
     tabs[tabFocus].setAttribute("tabindex", 0);
     tabs[tabFocus].focus();
 }
+
+function changeTabPanel(e) {
+    const targetTab = e.target;
+    const targetPanel = targetTab.getAttribute("aria-controls");
+    const targetContainer = targetTab.parentNode;
+    const mainContainer = targetContainer.parentNode;
+
+    mainContainer.querySelectorAll('article').forEach(article => article.setAttribute("hidden", true));
+    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+    console.log(mainContainer);
+}
