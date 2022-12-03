@@ -1,12 +1,15 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
+const pics = document.querySelectorAll('picture');
 
 let tabFocus = 0;
 tabList.addEventListener("keydown", changeTabFocus);
 
 tabs.forEach(tab => {
     tab.addEventListener("click", changeTabPanel);
+    tab.addEventListener('click', changePic);
 });
+pics.forEach(pic => pic.a)
 
 function changeTabFocus(e) {
     const keyDownLeft = 37;
@@ -42,7 +45,18 @@ function changeTabPanel(e) {
     const targetContainer = targetTab.parentNode;
     const mainContainer = targetContainer.parentNode;
 
-    mainContainer.querySelectorAll('article').forEach(article => article.setAttribute("hidden", true));
+    mainContainer.querySelectorAll('[role="tabpanel"]').forEach(tabpanel => tabpanel.setAttribute("hidden", true));
     mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
     console.log(mainContainer);
+}
+
+function changePic(e) {
+    const targetTab = e.target;
+    const targetPanel = targetTab.getAttribute("aria-controls");
+    const targetContainer = targetTab.parentNode;
+    const mainContainer = targetContainer.parentNode;
+
+    mainContainer.querySelectorAll('picture').forEach(pic => pic.setAttribute('hidden', true));
+
+
 }

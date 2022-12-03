@@ -542,26 +542,19 @@
     .destination {
         background: url('../assets/destination/background-destination-mobile.jpg');
         background-size: cover;
-        background-position: bottom center;
-        background-repeat: no-repeat;
     }
     
     @media(min-width:35rem) {
         .destination {
             background: url('../assets/destination/background-destination-tablet.jpg');
-            background-size: cover;
             background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-size: cover;
         }
     }
     
     @media(min-width:64rem) {
         .destination {
             background: url('../assets/destination/background-destination-desktop.jpg');
-            background-size: cover;
-            background-position: bottom center;
-            background-repeat: no-repeat;
         }
     }
     /*crew*/
@@ -569,17 +562,11 @@
     .crew {
         background: url('../assets/crew/background-crew-mobile.jpg');
         background-size: cover;
-        background-position: bottom center;
-        background-repeat: no-repeat;
     }
     
     @media(min-width:35rem) {
         .crew {
             background: url('../assets/crew/background-crew-tablet.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
         }
     }
     
@@ -587,8 +574,6 @@
         .crew {
             background: url('../assets/crew/background-crew-desktop.jpg');
             background-size: cover;
-            background-position: bottom center;
-            background-repeat: no-repeat;
         }
     }
     /*---------------*/
@@ -631,7 +616,8 @@
     
     .grid-container--destination>picture {
         grid-area: image;
-        max-width: 60%;
+        max-width: 40%;
+        justify-self: start;
     }
     
     .grid-container--destination>.tab-list {
@@ -661,6 +647,11 @@
         .destination-meta {
             flex-direction: row;
             justify-content: space-evenly;
+        }
+        .grid-container--destination>picture {
+            grid-area: image;
+            max-width: 60%;
+            justify-self: center;
         }
     }
     /*  crew layout*/
@@ -750,8 +741,4 @@
         .grid-container--crew>picture {
             align-self: end;
         }
-    }
-    
-    [role="tab"]:focus {
-        color: yellow;
     }
