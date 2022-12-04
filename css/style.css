@@ -667,6 +667,10 @@
             max-width: 90%;
             border-bottom: 1px solid hsl( var(--clr-white) /.1);
         }
+        .grid-container--tech>picture>img {
+            grid-area: image;
+            max-width: 100%;
+        }
     }
     
     @media(min-width:45rem) {
@@ -712,6 +716,8 @@
     .grid-container--tech {
         --flow-space: 2rem;
         grid-template-areas: 'title' 'image' 'tabs' 'contents';
+        padding: 0;
+        padding-bottom: 8rem;
     }
     
     .grid-container--tech>picture {
