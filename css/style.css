@@ -594,6 +594,25 @@
             background-size: cover;
         }
     }
+    /*Tech*/
+    
+    .tech {
+        background: url('../assets/technology/background-technology-mobile.jpg');
+        background-size: cover;
+    }
+    
+    @media(min-width:45rem) {
+        .tech {
+            background: url('../assets/technology/background-technology-tablet.jpg');
+        }
+    }
+    
+    @media(min-width:64rem) {
+        .tech {
+            background: url('../assets/technology/background-technology-desktop.jpg');
+            background-size: cover;
+        }
+    }
     /*---------------*/
     /*Destination styling*/
     /*------------------*/
