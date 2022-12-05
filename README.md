@@ -203,7 +203,7 @@ I want know to continue getting better in Js and improve my level of proficiency
 
 ### Useful resources
 
-- [Scrimba resource 1](https://scrimba.com/learn/spacetravel/) - This resource provided me with a wonderful instructor known as Kevin Powell who did a great job by showing good practices and tips to build more responsive websites.
+- [Scrimba resource ](https://scrimba.com/learn/spacetravel/) - This resource provided me with a wonderful instructor known as Kevin Powell who did a great job by showing good practices and tips to build more responsive websites.
 
 
 
