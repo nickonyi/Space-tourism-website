@@ -61,31 +61,143 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+With this project, I learned about how to change different contents and Images from the same page using tablist and tabpanel without having the need to link extra files to the page. There is nothing wrong with linking pages but using this method improves my Js skills greatly.
 
-To see how you can add code snippets, see below:
+
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="circle-indicators flex-c" role="tablist" aria-label="crew member list">
+            <button tabindex="0" role="tab" data-image="space-image" aria-controls="space-tab" aria-selected="true"><span class="sr-only">The commander</span>1</button>
+            <button tabindex="-1" role="tab" data-image="port-image" aria-controls="port-tab" aria-selected="false"><span class="sr-only">The mission specialist</span>2</button>
+            <button tabindex="-1" role="tab" data-image="capsule-image" aria-controls="capsule-tab" aria-selected="false"><span class="sr-only">The pilot</span>3</button>
+        </div>
+        <picture id="space-image">
+            <img src="./assets/technology/image-launch-vehicle-landscape.jpg " alt="launch vehicle ">
+        </picture>
+        <picture id="port-image" hidden>
+            <img src="./assets/technology/image-spaceport-landscape.jpg " alt="Space port ">
+        </picture>
+        <picture id="capsule-image" hidden>
+            <img src="./assets/technology/image-space-capsule-landscape.jpg" alt="Space capsule ">
+        </picture>
+        <!--Space vehicle-->
+        <article class="tech-details flow" id="space-tab" role="tabpanel" tabindex="0">
+            <header class="flow flow-space--small">
+                <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+                <p class="fs-700 uppercase ff-serif"> Launch vehicle</p>
+            </header>
+            <p> A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+                it's quite an awe-inspiring sight on the launch pad!</p>
+        </article>
+        <!--Space port vehicle-->
+        <article hidden class="tech-details flow" id="port-tab" role="tabpanel" tabindex="0">
+            <header class="flow flow-space--small">
+                <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+                <p class="fs-700 uppercase ff-serif"> Spaceport</p>
+            </header>
+            <p> A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s
+                rotation for launch.</p>
+        </article>
+        <!--Space capsule vehicle-->
+        <article hidden class="tech-details flow" id="capsule-tab" role="tabpanel" tabindex="0">
+            <header class="flow flow-space--small">
+                <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+                <p class="fs-700 uppercase ff-serif"> Space capsule</p>
+            </header>
+            <p> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty
+                of other activities to keep you entertained.</p>
+        </article>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+cconst tabList = document.querySelector('[role="tablist"]');
+const tabs = tabList.querySelectorAll('[role="tab"]');
+const pics = document.querySelectorAll('picture');
+
+let tabFocus = 0;
+tabList.addEventListener("keydown", changeTabFocus);
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", changeTabPanel);
+
+});
+pics.forEach(pic => pic.a)
+
+function changeTabFocus(e) {
+    const keyDownLeft = 37;
+    const keyDownRight = 39;
+
+
+    if (e.keyCode == keyDownLeft || e.keyCode == keyDownRight) {
+        tabs[tabFocus].setAttribute("tabindex", -1);
+        if (e.keyCode == keyDownRight) {
+            tabFocus++;
+            if (tabFocus >= tabs.length) {
+                tabFocus = 0;
+            }
+        }
+
+
+        if (e.keyCode === keyDownLeft) {
+            tabFocus--;
+            if (tabFocus < 0) {
+                tabFocus = tabs.length - 1;
+            }
+        }
+        tabs[tabFocus].setAttribute("tabindex", 0);
+        tabs[tabFocus].focus();
+    }
+}
+
+function changeTabPanel(e) {
+    const targetTab = e.target;
+    const targetPanel = targetTab.getAttribute("aria-controls");
+    const targetImage = targetTab.getAttribute("data-image");
+    const targetContainer = targetTab.parentNode;
+    const mainContainer = targetContainer.parentNode;
+
+    targetContainer.querySelector('[aria-selected="true"]').setAttribute("aria-selected", true);
+    targetTab.setAttribute("aria-selected", true);
+
+    hideContent(mainContainer, '[role="tabpanel"]');
+    showContent(mainContainer, [`#${targetPanel}`]);
+
+    hideContent(mainContainer, 'picture');
+    showContent(mainContainer, [`#${targetImage}`]);
+    // mainContainer
+    //     .querySelectorAll('[role="tabpanel"]')
+    //     .forEach((panel) => panel.setAttribute("hidden", true));
+    // mainContainer
+    //     .querySelector([`#${targetPanel}`])
+    //     .removeAttribute('hidden');
+
+    // mainContainer
+    //     .querySelectorAll('picture')
+    //     .forEach(pic => pic.setAttribute("hidden", true));
+    // mainContainer
+    //     .querySelector([`#${targetImage}`])
+    //     .removeAttribute('hidden');
+
+
+}
+
+function hideContent(parent, content) {
+    parent.querySelectorAll(content)
+        .forEach(item => item
+            .setAttribute("hidden", true));
+}
+
+function showContent(parent, img) {
+    parent
+        .querySelector(img)
+        .removeAttribute('hidden');
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I want know to continue getting better in Js and improve my level of proficiency when it comes to web development.
 
 
 
